@@ -29,7 +29,7 @@ if [ -r ./current_md5.txt ]
     then 
         
         printf 'MD5 checksum file is present, checking the sum...\n' >> ./log.txt;
-        md5=$(<./current_md5.txt);
+        md5=$(cat ./current_md5.txt);
         printf "Old MD5: $md5\n" >> ./log.txt;
         printf "New MD5: $new_md5\n" >> ./log.txt;
         if [ "$new_md5" = "$md5" ]
