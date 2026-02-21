@@ -1,4 +1,4 @@
-#!/bin/bash
+#! /usr/bin/sh
 
 if [ ! -r ./log.txt ]
     then touch ./log.txt;
