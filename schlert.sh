@@ -44,8 +44,8 @@ if [ -r ./current_md5.txt ]
         fi
     else
         printf 'MD5 checksum file does not exist, creating new MD5 checksum file...\n' >> ./log.txt;
-        touch current_md5.txt;
-        echo $new_md5 > current_md5.txt;
+        touch ./current_md5.txt;
+        echo $new_md5 > ./current_md5.txt;
 fi
 
 
