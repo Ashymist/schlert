@@ -32,8 +32,7 @@ if [ -r ./current_md5.txt ]
         md5=$(cat ./current_md5.txt);
         printf "Old MD5: $md5\n" >> ./log.txt;
         printf "New MD5: $new_md5\n" >> ./log.txt;
-        if [ "$new_md5" = "$md5" ]
-            then
+        if [ "$new_md5" = "$md5"] || [ -z "$new_md5" ]
                 printf 'MD5 sum hasn`t changed\n' >> ./log.txt;
             else
                 printf 'MD5 sum has changed! Changing the MD5 checksum file...\n' >> ./log.txt;
